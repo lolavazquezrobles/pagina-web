@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+/* ------------------------------
+   BASE
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gloock', serif;
+  background-color: #0f2523;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  background-color: #0d1f1e;
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4rem;
+}
+
+header h1 {
+  font-size: 5.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #f5f5f5;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+nav ul li {
+  margin: 0.8rem 0;
+}
+
+nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d1b97f;
+}
+
+/* ------------------------------
+   SECCIONES GENERALES
+------------------------------ */
+main {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(245, 245, 245, 0.9);
+  text-align: center;
+}
+
+/* ------------------------------
+   FOTO PRINCIPAL CENTRADA (Inicio)
+------------------------------ */
+#inicio img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ------------------------------
+  MENU
+------------------------------ */
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .platos {
+    flex: 1;
+  }
+  
+  .platos h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .platos article {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .platos h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .platos p {
+    font-size: 1rem;
+    color: rgba(245, 245, 245, 0.9);
+    line-height: 1.6;
+  }
+  
+  .imagenes-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: 0.8;
+  }
+  
+  .imagenes-menu img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 320px;
+  }
+  
+  @media (max-width: 768px) {
+    #menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .platos h2 {
+      text-align: center;
+    }
+  
+    .imagenes-menu {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .imagenes-menu img {
+      width: 45%;
+      height: auto;
+    }
+  }
+  
+  
+/* CONTACTO */
+#contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+  
+  #contacto .info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  #contacto img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #contacto h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  
+  #contacto p {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(245, 245, 245, 0.9);
+  }
+  
+  #contacto a {
+    color: #d1b97f;
+    text-decoration: none;
+  }
+  
+  #contacto a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    #contacto {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #contacto img {
+      max-width: 90%;
+    }
+  }
+  
+
+/* ------------------------------
+   FORMULARIOS (Reservas)
+------------------------------ */
+.formulario {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input, button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Gloock', serif;
+  font-size: 1rem;
+}
+
+input {
+  background-color: #1d3835;
+  color: #f5f5f5;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+  background-color: #d1b97f;
+  color: #0d1f1e;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e2c98c;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  background-color: #0d1f1e;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3.8rem;
+  }
+
+  #menu .plato {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #menu .plato img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contacto img {
+    max-width: 100%;
+  }
+
+  #contacto .info {
+    text-align: center;
+  }
+}
+/* ------------------------------
+   RESEÑAS
+------------------------------ */
+#reseñas {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#reseñas h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.lista-reseñas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.reseña {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #d1b97f;
+}
+
+.reseña h3 {
+  font-weight: 500;
+  color: #d1b97f;
+  margin-bottom: 0.8rem;
+}
+
+.reseña p {
+  font-style: italic;
+  color: rgba(245, 245, 245, 0.9);
+}
+
+
+.formulario-reseña {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.formulario-reseña h3 {
+  color: #d1b97f;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.formulario-reseña form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-reseña input,
+.formulario-reseña textarea {
+  width: 100%;
+  background-color: #1d3835;
+  border: none;
+  border-radius: 5px;
+  padding: 0.9rem;
+  color: #f5f5f5;
+  font-family: 'Gloock', serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formulario-reseña textarea {
+  height: 120px;
+  resize: none;
+}
+
+.formulario-reseña button {
+  align-self: flex-end;
+  background-color: #d1b97f;
+  color: #0d1f1e;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario-reseña button:hover {
+  background-color: #e2c98c;
+}
+
+
+.mensaje-exito {
+  color: rgb(209, 162, 74);
+  font-weight: bold;
+  margin-top: 10px;
+}

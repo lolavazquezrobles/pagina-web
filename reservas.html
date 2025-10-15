@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | Blanca House</title>
+  <link rel="stylesheet" href="formato.css">
+</head>
+<body>
+
+
+  
+  <header>
+    <h1>Blanca House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="reservas">
+      <h2>Reservas</h2>
+
+      <div class="formulario">
+        <h3>Reserve su mesa</h3>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="personas" placeholder="Cantidad de personas" required>
+        <input type="date" id="fecha" required>
+        <input type="time" id="hora" required>
+        <input type="email" id="mail" placeholder="Mail" required>
+        <button id="agregar">Reservar</button>
+      </div>
+
+       <!-- FORMULARIO EDITAR -->
+       <div class="formulario">
+        <h3>Editar reserva</h3>
+        <input type="number" id="idEditar" placeholder="ID de reserva" required>
+        <input type="text" id="nombre2" placeholder="Nombre" required>
+        <input type="number" id="personas2" placeholder="Cantidad de personas" required>
+        <input type="date" id="fecha2" required>
+        <input type="time" id="hora2" required>
+        <button id="editar">Editar</button>
+      </div>
+
+      <!-- FORMULARIO ELIMINAR -->
+      <div class="formulario">
+        <h3>Eliminar reserva</h3>
+        <input type="number" id="idEliminar" placeholder="ID de reserva a eliminar" required>
+        <button id="eliminar">Eliminar</button>
+      </div>
+
+
+      <div id="listaReservas"></div>
+
+      <!-- CONSULTAR RESERVAS -->
+      <div class="formulario">
+        <h3>Consultar reservas por correo</h3>
+        <input type="email" id="mailConsulta" placeholder="Tu mail" required>
+        <button id="consultar">Consultar</button>
+      </div>
+
+      <div id="resultadoConsulta"></div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Blanca House | Salguero 3453, CABA | Tel: (011) 5585-7855</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("GDkl2_g2nbwuSsWH-");
+  </script>
+  <script src="blanca_house.js"></script>
+
+</body>
+</html>

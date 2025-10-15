@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas | Blanca House</title>
+  <link rel="stylesheet" href="formato.css">
+</head>
+<body>
+
+    
+
+  <header>
+    <h1>Blanca House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="reseñas.html">Reseñas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="reseñas">
+      <h2>Reseñas</h2>
+
+      <div class="lista-reseñas">
+        <article class="reseña">
+          <h3>Mariana P.</h3>
+          <p>"Un ambiente cálido, comida excelente y atención impecable. Volvería sin dudarlo."</p>
+        </article>
+
+        <article class="reseña">
+          <h3>Diego L.</h3>
+          <p>"El cordero fueguino es simplemente espectacular. Ideal para una cena tranquila."</p>
+        </article>
+      </div>
+
+      <div id="listaReseñas"></div>
+
+      <div class="formulario-reseña">
+        <h3>Dejá tu reseña</h3>
+        <form>
+          <input type="text" id="nombreReseña" placeholder="Tu nombre" required>
+          <textarea placeholder="Escribí tu reseña..." id="textoReseña" required></textarea>
+          <input type="email" id="correoReseña" placeholder="Mail_reseña" required>
+          <button type="button" id="enviarReseña">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Blanca House | Salguero 3453, CABA | Tel: (011) 5585-7855</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("GDkl2_g2nbwuSsWH-");
+  </script>
+  <script src="blanca_house.js"></script>
+
+</body>
+</html>
