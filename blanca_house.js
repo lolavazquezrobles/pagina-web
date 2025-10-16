@@ -27,7 +27,7 @@ function agregarReserva() {
   // Mostrar solo mensaje de éxito
 let resultados = document.getElementById("listaReservas");
 if (resultados) {
-  resultados.innerHTML = `<p class="mensaje-exito"> Reserva exitosa. ¡Gracias ${nombreHTML}!</p>`;
+  resultados.innerHTML = `<p class="mensaje-exito"> Reserva exitosa. Recibira un Email de comfirmacion! ${nombreHTML}!</p>`;
 }
 //vacio para hacer una nueva reserva 
   limpiarCamposReserva();
@@ -51,21 +51,31 @@ if (botonAgregar) {
 
 // FUNCION EDITAR
 function editarReserva() {
-  let id2 = document.getElementById("idEditar").value;
-
-  for (let i = 0; i < reservas.length; i++) {
-    if (id2 == reservas[i].id) {
-      reservas[i].nombre = document.getElementById("nombre2").value;
-      reservas[i].personas = document.getElementById("personas2").value;
-      reservas[i].fecha = document.getElementById("fecha2").value;
-      reservas[i].hora = document.getElementById("hora2").value;
+    let id2 = document.getElementById("idEditar").value;
+  
+    for (let i = 0; i < reservas.length; i++) {
+      if (id2 == reservas[i].id) {
+        reservas[i].nombre = document.getElementById("nombre2").value;
+        reservas[i].personas = document.getElementById("personas2").value;
+        reservas[i].fecha = document.getElementById("fecha2").value;
+        reservas[i].hora = document.getElementById("hora2").value;
+  
+        // Enviar mail de confirmación de edición
+        emailjs.send("service_48a6fof", "template_0vswfoj", {
+          nombre: reservas[i].nombre,
+          mail: reservas[i].mail,
+          personas: reservas[i].personas,
+          fecha: reservas[i].fecha,
+          hora: reservas[i].hora,
+          id: reservas[i].id
+        });
+      }
     }
+  
+    mostrarReservas(reservas);
+    console.log(reservas);
   }
-
-  mostrarReservas(reservas);
-  console.log(reservas);
-}
-
+  
 let botonEditar = document.getElementById("editar");
 if (botonEditar) {
   botonEditar.addEventListener("click", editarReserva);
