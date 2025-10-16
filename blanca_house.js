@@ -71,9 +71,6 @@ function editarReserva() {
         });
       }
     }
-  
-    mostrarReservas(reservas);
-    console.log(reservas);
   }
   
 let botonEditar = document.getElementById("editar");
@@ -91,7 +88,7 @@ function eliminarReserva() {
     }
   }
 
-  mostrarReservas(reservas);
+  leerReservas(reservas);
   console.log(reservas);
 }
 
@@ -122,6 +119,7 @@ function leerReservas() {
         resultado.innerHTML += `
           <div class="reserva">
             <p><strong>ID:</strong> ${r.id}</p>
+            <p><strong>Nombre:</strong> ${r.nombre}</p>
             <p><strong>Fecha:</strong> ${r.fecha}</p>
             <p><strong>Hora:</strong> ${r.hora}</p>
             <p><strong>Personas:</strong> ${r.personas}</p>
