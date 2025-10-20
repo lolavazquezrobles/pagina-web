@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
 /* ------------------------------
-   BASE
+   formato base
 ------------------------------ */
 * {
   margin: 0;
@@ -16,8 +16,11 @@ body {
   line-height: 1.6;
 }
 
+
+
+
 /* ------------------------------
-   HEADER
+   header
 ------------------------------ */
 header {
   background-color: #0d1f1e;
@@ -57,8 +60,10 @@ nav ul li a:hover {
   color: #d1b97f;
 }
 
+
+
 /* ------------------------------
-   SECCIONES GENERALES
+   secciones generales
 ------------------------------ */
 main {
   padding: 2rem 1.5rem 4rem;
@@ -86,8 +91,10 @@ p {
   text-align: center;
 }
 
+
+
 /* ------------------------------
-   FOTO PRINCIPAL CENTRADA (Inicio)
+   foto index centrada
 ------------------------------ */
 #inicio img {
   display: block;
@@ -97,8 +104,11 @@ p {
   height: auto;
 }
 
+
+
+
 /* ------------------------------
-  MENU
+  menu
 ------------------------------ */
 
 #menu {
@@ -175,65 +185,11 @@ p {
     }
   }
   
-  
-/* CONTACTO */
-#contacto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    padding: 2rem 0;
-  }
-  
-  #contacto .info {
-    flex: 1;
-    text-align: left;
-  }
-  
-  #contacto img {
-    flex: 1;
-    max-width: 400px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  #contacto h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-  }
-  
-  #contacto p {
-    margin: 0.6rem 0;
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: rgba(245, 245, 245, 0.9);
-  }
-  
-  #contacto a {
-    color: #d1b97f;
-    text-decoration: none;
-  }
-  
-  #contacto a:hover {
-    text-decoration: underline;
-  }
-  
- 
-  @media (max-width: 768px) {
-    #contacto {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    #contacto img {
-      max-width: 90%;
-    }
-  }
-  
 
-/* ------------------------------
-   FORMULARIOS (Reservas)
+
+
+  /* ------------------------------
+   reservas 
 ------------------------------ */
 .formulario {
   margin: 2rem auto;
@@ -273,8 +229,9 @@ button:hover {
 }
 
 
+
 /* ------------------------------
-   FOOTER
+   footer
 ------------------------------ */
 footer {
   background-color: #0d1f1e;
@@ -315,8 +272,12 @@ footer {
     text-align: center;
   }
 }
+
+
+
+
 /* ------------------------------
-   RESEÑAS
+   reseñas
 ------------------------------ */
 #reseñas {
   max-width: 900px;
@@ -418,3 +379,64 @@ footer {
   font-weight: bold;
   margin-top: 10px;
 }
+
+
+
+/* ------------------------------
+   contacto
+------------------------------ */
+#contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+  
+  #contacto .info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  #contacto img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #contacto h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  
+  #contacto p {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(245, 245, 245, 0.9);
+  }
+  
+  #contacto a {
+    color: #d1b97f;
+    text-decoration: none;
+  }
+  
+  #contacto a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    #contacto {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #contacto img {
+      max-width: 90%;
+    }
+  }
+  
+

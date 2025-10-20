@@ -8,8 +8,6 @@
 </head>
 <body>
 
-
-  
   <header>
     <h1>Blanca House</h1>
     <nav>
@@ -26,29 +24,43 @@
   <main>
     <section id="reservas">
       <h2>Reservas</h2>
-
+    
+      <!--  reservar  -->
       <div class="formulario">
         <h3>Reserve su mesa</h3>
         <input type="text" id="nombre" placeholder="Nombre" required>
         <input type="number" id="personas" placeholder="Cantidad de personas" required>
         <input type="date" id="fecha" required>
-        <input type="time" id="hora" required>
+        <select id="hora" required>
+          <option value="">Seleccione un horario</option>
+          <option value="19:00">19:00</option>
+          <option value="20:30">20:30</option>
+          <option value="22:00">22:00</option>
+        </select>
+        <p id="disponibilidad" style="text-align:center; font-size:1rem; color:#d1b97f;"></p>
         <input type="email" id="mail" placeholder="Mail" required>
         <button id="agregar">Reservar</button>
       </div>
 
-       <!-- FORMULARIO EDITAR -->
+       <!--  editar reserva  -->
        <div class="formulario">
         <h3>Editar reserva</h3>
         <input type="number" id="idEditar" placeholder="ID de reserva" required>
         <input type="text" id="nombre2" placeholder="Nombre" required>
         <input type="number" id="personas2" placeholder="Cantidad de personas" required>
         <input type="date" id="fecha2" required>
-        <input type="time" id="hora2" required>
+        <select id="hora" required>
+          <option value="">Seleccioná un horario</option>
+          <option value="19:00">19:00</option>
+          <option value="20:30">20:30</option>
+          <option value="22:00">22:00</option>
+        </select>
+        <p id="disponibilidad" style="text-align:center; font-size:1rem; color:#d1b97f;"></p>
+        
         <button id="editar">Editar</button>
       </div>
 
-      <!-- FORMULARIO ELIMINAR -->
+       <!--  eliminar rreserva  -->
       <div class="formulario">
         <h3>Eliminar reserva</h3>
         <input type="number" id="idEliminar" placeholder="ID de reserva a eliminar" required>
@@ -58,7 +70,7 @@
 
       <div id="listaReservas"></div>
 
-      <!-- CONSULTAR RESERVAS -->
+       <!-- consultar reservas -->
       <div class="formulario">
         <h3>Consultar reservas por correo</h3>
         <input type="email" id="mailConsulta" placeholder="Tu mail" required>
