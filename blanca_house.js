@@ -82,8 +82,9 @@ function editarReserva() {
   let personas2 = document.getElementById("personas2").value.trim();
   let fecha2 = document.getElementById("fecha2").value.trim();
   let hora2 = document.getElementById("hora2").value.trim();
+  let mail2 = document.getElementById("mail2").value.trim();
 
-  if (!id2 || !nombre2 || !personas2 || !fecha2 || !hora2) {
+  if (!id2 || !nombre2 || !personas2 || !fecha2 || !hora2 || !mail2) {
     alert("Por favor completá todos los campos para editar la reserva.");
     return;
   }
@@ -113,6 +114,7 @@ function editarReserva() {
       reservas[i].personas = personas2;
       reservas[i].fecha = fecha2;
       reservas[i].hora = hora2;
+      reservas[i].mail = mail2;
       
       guardarReservasLocal(); 
       // guardo después de editar
