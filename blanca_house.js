@@ -84,7 +84,12 @@ function editarReserva() {
   let hora2 = document.getElementById("hora2").value.trim();
   let mail2 = document.getElementById("mail2").value.trim();
 
-  if (!id2 || !nombre2 || !personas2 || !fecha2 || !hora2 || !mail2) {
+  if (Number.isNaN(id2)) {
+    alert("Ingresá un ID válido.");
+    return;
+  }
+
+  if (!nombre2 || !personas2 || !fecha2 || !hora2 || !mail2) {
     alert("Por favor completá todos los campos para editar la reserva.");
     return;
   }
@@ -116,6 +121,7 @@ function editarReserva() {
       reservas[i].hora = hora2;
       reservas[i].mail = mail2;
       
+      
       guardarReservasLocal(); 
       // guardo después de editar
 
@@ -127,12 +133,15 @@ function editarReserva() {
         hora: reservas[i].hora,
         id: reservas[i].id
       });
+
+    // actualizar lugares disponibles
+    actualizarDisponibilidad();
+    limpiarCamposEdicion();    
+        alert("Reserva actualizada correctamente.");
+        
     }
   }
-  guardarReservasLocal(); 
-  actualizarDisponibilidad(); 
-  // actualizar lugares disponibles
-
+  
 }
 
 let botonEditar = document.getElementById("editar");
@@ -140,7 +149,17 @@ if (botonEditar) {
   botonEditar.addEventListener("click", editarReserva);
 }
 
-
+//-----------------------------------------------------------------------------------------------
+// funcion para vaciar campos en eitar 
+function limpiarCamposEdicion() {
+    document.getElementById("idEditar").value = "";
+    document.getElementById("nombre2").value = "";
+    document.getElementById("personas2").value = "";
+    document.getElementById("fecha2").value = "";
+    document.getElementById("hora2").value = "";
+    document.getElementById("mail2").value = "";
+  }
+  
 
 //-----------------------------------------------------------------------------------------------
 // funcion para ELIMINAR una reserva
